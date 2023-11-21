@@ -1,0 +1,28 @@
+.EditItem{
+    display: flex;
+    gap: 10px;
+}
+
+.EditItem input{
+    height: 24px;
+}
+
+.EditItem input:focus-visible{
+    outline-color: #2f74c1;
+}
+
+.EditItem button{
+    background-color: #2f74c1;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.EditItem button:hover{
+    background-color: #2b65a8;
+}
+
+.EditItem button:active{
+    background-color: #265994;
+}
