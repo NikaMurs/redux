@@ -5,13 +5,14 @@ export type ListItemType = {
 }
 
 export type StateType = {
-    isEdit: number
     list: {
+        isEdit: number
         list: Array<ListItemType>
     }
 }
 
 export type ListItemProps = {
+    onDelete: CallableFunction
     onEdit: CallableFunction,
     item: ListItemType
 }

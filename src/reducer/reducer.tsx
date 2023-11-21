@@ -24,12 +24,24 @@ export default function reducer(state = initialState, action: any){
 		}
         case 'IS_EDIT': return {
             ...state,
-            isEdit: action.payload.key
+            isEdit: action.payload
         }
-        case 'GET_BY_ID': {
-            const item = state.list.find((el)=> el.id === state.isEdit)
-            console.log(item)
-            return 123
+        case 'SAVE_EDIT':  {
+            state.list.map((el) => {
+                if (el.id === state.isEdit){
+                    el.description = action.payload.description
+                    el.price = action.payload.price
+                }
+            })
+            return {...state, isEdit: -1}
+        }
+        case 'DELETE': {
+            for (let i = 0; i < state.list.length; i++){
+                if (state.list[i].id === action.payload){
+                    state.list.splice(i, 1)
+                }
+            }
+            return {...state}
         }
 		default: return state
 	}
