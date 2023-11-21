@@ -6,7 +6,8 @@ export type ListItemType = {
 
 export type StateType = {
     list: {
-        isEdit: number
+        isEdit: number,
+        filter: string,
         list: Array<ListItemType>
     }
 }

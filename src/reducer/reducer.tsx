@@ -1,5 +1,6 @@
 const initialState = {
     isEdit: -1,
+    filter: '',
 	list: [{
         id: 0,
         description: 'Замена стекла',
@@ -9,9 +10,19 @@ const initialState = {
         id: 1,
         description: 'Замена аккумулятора',
         price: 8000
+    },
+    {
+        id: 2,
+        description: 'Красный чехол',
+        price: 600
+    },
+    {
+        id: 3,
+        description: 'Синий чехол',
+        price: 700
     }]
 }
-let nextId = 2;
+let nextId = 4;
 export default function reducer(state = initialState, action: any){
 	switch(action.type){
 		case 'ADD_ITEM': return {
@@ -42,6 +53,10 @@ export default function reducer(state = initialState, action: any){
                 }
             }
             return {...state}
+        }
+        case 'ADD_FILTER': return {
+            ...state,
+            filter: action.payload
         }
 		default: return state
 	}

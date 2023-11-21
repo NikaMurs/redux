@@ -1,8 +1,15 @@
 .List{
-    padding-left: 20px;
-    margin-top: 10px;
+    padding: 20px;
+    padding-left: 40px;
+    margin-top: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px
 }
 
 .List li{
     font-size: 18px;
+    width: 100%;
 }

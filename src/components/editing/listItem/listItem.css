@@ -1,7 +1,7 @@
 .ListItemContent{
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    width: 100%;
 }
 
 .ListItemContent p{

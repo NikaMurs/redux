@@ -23,9 +23,10 @@ export default function AddNew() {
 
     return (
         <form className='AddNew' onSubmit={onSubmit}>
-            <input type="text" name='description' />
-            <input type="number" name='price' />
-            <button>Сохранить</button>
+            <i className="fa-solid fa-plus"></i>
+            <input type="text" name='description' placeholder='Название'/>
+            <input type="number" name='price' placeholder='Цена'/>
+            <button>Добавить</button>
         </form>
     )
 }

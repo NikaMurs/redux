@@ -5,16 +5,19 @@ import { StateType } from '../../../types'
 
 export default function List() {
     const dispatch = useDispatch()
-    const {list} = useSelector((state: StateType)=>state.list)
+    const { list, filter } = useSelector((state: StateType) => state.list)
 
-    function onEdit(id: number){
+    var re = new RegExp(filter.toLowerCase(),"g");
+    const filterList = list.filter((item) => item.description.toLowerCase().match(re));
+
+    function onEdit(id: number) {
         dispatch({
             type: 'IS_EDIT',
             payload: id
         })
     }
 
-    function onDelete(id: number){
+    function onDelete(id: number) {
         dispatch({
             type: 'DELETE',
             payload: id
@@ -23,8 +26,8 @@ export default function List() {
 
     return (
         <ul className='List'>
-            {list.map((el) => {
-                return <ListItem item={el} key={el.id} onEdit={onEdit} onDelete={onDelete}/>
+            {filterList.map((el) => {
+                return <ListItem item={el} key={el.id} onEdit={onEdit} onDelete={onDelete} />
             })}
         </ul>
     )
