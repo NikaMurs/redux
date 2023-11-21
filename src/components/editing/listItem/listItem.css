@@ -1,0 +1,28 @@
+.ListItemContent{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.ListItemContent p{
+    margin: 0;
+}
+
+.ListItemContentButtons button{
+    background-color: #0d1117;
+    font-size: 14px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    padding: 7px;
+    color: #ffffff;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.ListItemContentButtons button:hover{
+    background-color: #27303b;
+}
+
+.ListItemContentButtons button:active{
+    background-color: #3a4552;
+}

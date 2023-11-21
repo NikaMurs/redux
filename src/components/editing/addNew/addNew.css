@@ -1,0 +1,28 @@
+.AddNew{
+    display: flex;
+    gap: 10px;
+}
+
+.AddNew input{
+    height: 24px;
+}
+
+.AddNew input:focus-visible{
+    outline-color: #2f74c1;
+}
+
+.AddNew button{
+    background-color: #2f74c1;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.AddNew button:hover{
+    background-color: #2b65a8;
+}
+
+.AddNew button:active{
+    background-color: #265994;
+}
