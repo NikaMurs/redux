@@ -1,11 +1,15 @@
 import { useDispatch } from 'react-redux'
 import './editItem.css'
+import { useEffect } from 'react'
 
-export default function EditItem(){
+export default function EditItem() {
     const dispatch = useDispatch();
-    dispatch({
-        type: 'GET_BY_ID',
-    })
+
+    useEffect(() => {
+        dispatch({
+            type: 'GET_BY_ID',
+        })
+    }, [])
 
     return (
         <form className='EditItem'>
